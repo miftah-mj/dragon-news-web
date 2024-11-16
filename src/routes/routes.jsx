@@ -1,21 +1,25 @@
 import { createBrowserRouter } from "react-router-dom";
+import HomeLayout from "../layouts/HomeLayout";
+import NewsLayout from "../layouts/NewsLayout";
+import AuthLayout from "../layouts/AuthLayout";
+import ErrorPage from "../pages/ErrorPage";
 
 const routes = createBrowserRouter([
     {
         path: "/",
-        element: <h2>Home Layout</h2>,
+        element: <HomeLayout />,
     },
     {
         path: "/news",
-        element: <h2>News Layout</h2>,
+        element: <NewsLayout />,
     },
     {
         path: "auth",
-        element: <h2>Login</h2>,
+        element: <AuthLayout />,
     },
     {
         path: "*", // 404 Not Found
-        element: <h2>Error</h2>,
+        element: <ErrorPage />,
     },
 ]);
 
