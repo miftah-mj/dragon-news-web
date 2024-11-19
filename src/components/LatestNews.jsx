@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LatestNews = () => {
     return (
         <div className="flex items-center gap-4 bg-gray-100 p-2">
-            <div className="bg-[#D72050] text-white text-xl font-medium px-4 py-3 w-fit">
+            <div className="bg-primary text-white text-xl font-medium px-4 py-3 w-fit">
                 Latest
             </div>
             <Marquee pauseOnHover={true} className="space-x-10">
