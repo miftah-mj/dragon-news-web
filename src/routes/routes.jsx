@@ -4,6 +4,7 @@ import NewsLayout from "../layouts/NewsLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import ErrorPage from "../pages/ErrorPage";
 import CategoryNews from "../pages/CategoryNews";
+import Login from "../pages/Login";
 
 const routes = createBrowserRouter([
     {
@@ -31,6 +32,16 @@ const routes = createBrowserRouter([
     {
         path: "auth",
         element: <AuthLayout />,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login />,
+            },
+            {
+                path: "/auth/register",
+                element: <h2>Register</h2>,
+            },
+        ],
     },
     {
         path: "*", // 404 Not Found

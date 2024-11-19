@@ -1,6 +1,6 @@
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
-const Login = () => {
+const LoginWith = () => {
     return (
         <div>
             <h3 className="text-xl font-semibold pb-4">Login With</h3>
@@ -16,4 +16,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginWith;
