@@ -1,21 +1,40 @@
 import Header from "../components/Header";
 import LatestNews from "../components/LatestNews";
+import LeftContent from "../components/LeftContent";
+import MainContent from "../components/MainContent";
 import Navbar from "../components/Navbar";
+import RightContent from "../components/RightContent";
 
 const HomeLayout = () => {
     return (
-        <div>
+        <div className="w-11/12 mx-auto">
+            {/* header */}
             <header>
                 <Header />
-
-                <section className="w-11/12 mx-auto">
-                    <LatestNews />
-                </section>
-
-                <nav className="w-11/12 mx-auto">
-                    <Navbar />
-                </nav>
             </header>
+
+            {/* latest news */}
+            <section>
+                <LatestNews />
+            </section>
+
+            {/* navbar */}
+            <nav>
+                <Navbar />
+            </nav>
+
+            {/* main content */}
+            <main className="grid md:grid-cols-12">
+                <aside className="col-span-3">
+                    <LeftContent />
+                </aside>
+                <section className="col-span-6">
+                    <MainContent />
+                </section>
+                <aside className="col-span-3">
+                    <RightContent />
+                </aside>
+            </main>
         </div>
     );
 };
