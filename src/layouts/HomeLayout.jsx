@@ -24,7 +24,7 @@ const HomeLayout = () => {
             </nav>
 
             {/* main content */}
-            <main className="grid md:grid-cols-12">
+            <main className="grid md:grid-cols-12 gap-6">
                 <aside className="col-span-3">
                     <LeftContent />
                 </aside>

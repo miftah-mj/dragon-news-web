@@ -22,7 +22,7 @@ const LeftContent = () => {
         <div>
             <h3 className="text-xl font-semibold pb-4">All Category</h3>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 w-fit">
                 {categories.map((category) => (
                     <NavLink
                         key={category.category_id}
