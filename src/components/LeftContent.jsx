@@ -21,17 +21,16 @@ const LeftContent = () => {
     return (
         <div>
             <h3 className="text-xl font-semibold pb-4">All Category</h3>
-            <div>
+
+            <div className="flex flex-col gap-2">
                 {categories.map((category) => (
-                    <div key={category.id} className="py-2">
-                        <NavLink
-                            // key={category.category_id}
-                            to={`/category/${category.category_id}`}
-                            className="text-gray-500 p-2 hover:text-gray-900 hover:bg-gray-200 "
-                        >
-                            {category.category_name}
-                        </NavLink>
-                    </div>
+                    <NavLink
+                        key={category.category_id}
+                        to={`/category/${category.category_id}`}
+                        className="text-gray-500 px-4 py-2 rounded-md hover:text-gray-900"
+                    >
+                        {category.category_name}
+                    </NavLink>
                 ))}
             </div>
         </div>
