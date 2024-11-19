@@ -1,15 +1,32 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
     return (
         <div className="min-h-screen flex justify-center items-start">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
                 <form className="card-body">
                     <div className="form-control">
                         <h3 className="text-xl font-semibold text-center pb-4">
-                            Login to your account
+                            Register for an account
                         </h3>
-
+                        <label className="label">
+                            <span className="label-text">Full Name</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Enter your name"
+                            className="input input-bordered"
+                            required
+                        />
+                        <label className="label">
+                            <span className="label-text">Photo URl</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Enter your photo URL"
+                            className="input input-bordered"
+                            required
+                        />
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
@@ -30,28 +47,28 @@ const Login = () => {
                             className="input input-bordered"
                             required
                         />
-                        <label className="label">
-                            <a
-                                href="#"
-                                className="label-text-alt link link-hover"
-                            >
-                                Forgot password?
-                            </a>
+                        {/* accept term and condition */}
+                        <label className="cursor-pointer label">
+                            <input type="checkbox" className="checkbox" />
+                            <span className="checkbox-mark"></span>
+                            <span className="label-text">
+                                I accept the terms and conditions
+                            </span>
                         </label>
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-neutral rounded-md">
-                            Login
+                            Register
                         </button>
                     </div>
                 </form>
                 <p className="text-center">
-                    Don&apos;t have an account? {" "}
+                    Already Have An Account?{" "}
                     <Link
-                        to="/auth/register"
+                        to="/auth/login"
                         className="text-primary underline"
                     >
-                        Register
+                        Login
                     </Link>
                 </p>
             </div>
@@ -59,4 +76,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

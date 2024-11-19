@@ -5,6 +5,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import ErrorPage from "../pages/ErrorPage";
 import CategoryNews from "../pages/CategoryNews";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const routes = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ const routes = createBrowserRouter([
             },
             {
                 path: "/auth/register",
-                element: <h2>Register</h2>,
+                element: <Register />,
             },
         ],
     },
