@@ -24,7 +24,10 @@ const Navbar = () => {
                 <img src={userIcon} alt="User" className="w-full h-full" />
 
                 {user && user?.email ? (
-                    <Link onClick={logOut} className="btn btn-neutral rounded-none text-white hover:bg-gray-600">
+                    <Link
+                        onClick={logOut}
+                        className="btn btn-neutral rounded-none text-white hover:bg-gray-600"
+                    >
                         Logout
                     </Link>
                 ) : (

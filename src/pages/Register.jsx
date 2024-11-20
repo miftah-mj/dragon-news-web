@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
-    const { createNewUser, user, setUser } = useContext(AuthContext);
+    const { createNewUser, setUser } = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();

@@ -1,10 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+    const { userLogin, setUser } = useContext(AuthContext);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Logging in...");
+        // get the form data
+        const formData = e.target;
+        const email = formData.email.value;
+        const password = formData.password.value;
+        console.log({ email, password });
+        userLogin(email, password)
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+            })
+            .catch((error) => {
+                alert(error.code);
+            });
+    };
+
     return (
         <div className="min-h-screen flex justify-center items-start">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
-                <form className="card-body">
+                <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
                         <h3 className="text-xl font-semibold text-center pb-4">
                             Login to your account
@@ -17,12 +39,13 @@ const Login = () => {
                         </label>
                         <input
                             type="email"
+                            name="email"
                             placeholder="email"
                             className="input input-bordered"
                             required
                         />
                     </div>
-                    
+
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-semibold">
@@ -31,6 +54,7 @@ const Login = () => {
                         </label>
                         <input
                             type="password"
+                            name="password"
                             placeholder="password"
                             className="input input-bordered"
                             required

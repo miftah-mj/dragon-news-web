@@ -1,5 +1,6 @@
 import { AiOutlineEye, AiFillStar } from "react-icons/ai";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ newsItem }) => {
     const { image_url, title, details, author, rating, total_view } =
@@ -37,12 +38,12 @@ const NewsCard = ({ newsItem }) => {
                 <p className="text-sm text-gray-600">
                     {details.slice(0, 150)}...{" "}
                 </p>
-                <a
-                    href="#"
+                <Link
+                    to={`/news/${newsItem._id}`}
                     className="text-sm font-semibold text-orange-400 hover:underline"
                 >
                     Read More
-                </a>
+                </Link>
             </div>
             <hr className="mx-4" />
 
