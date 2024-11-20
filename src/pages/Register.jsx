@@ -1,14 +1,47 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
+    const { createNewUser, user, setUser } = useContext(AuthContext);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Registering...");
+        // get the form data
+        const formData = new FormData(e.target);
+        // const data = Object.fromEntries(formData);
+        // console.log(data);
+
+        const name = formData.get("name");
+        const photo = formData.get("photo");
+        const email = formData.get("email");
+        const password = formData.get("password");
+        console.log({ name, photo, email, password });
+
+        createNewUser(email, password)
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                console.log(user);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                console.log(errorCode, errorMessage);
+            });
+    };
+
     return (
         <div className="min-h-screen flex justify-center items-start">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
-                <form className="card-body">
+                <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
                         <h3 className="text-xl font-semibold text-center pb-4">
                             Register for an account
                         </h3>
+                        {/* name */}
                         <label className="label">
                             <span className="label-text font-semibold">
                                 Full Name
@@ -16,11 +49,12 @@ const Register = () => {
                         </label>
                         <input
                             type="text"
+                            name="name"
                             placeholder="Enter your name"
                             className="input input-bordered"
                             required
                         />
-
+                        {/* photo */}
                         <label className="label">
                             <span className="label-text font-semibold">
                                 Photo URl
@@ -28,11 +62,12 @@ const Register = () => {
                         </label>
                         <input
                             type="text"
+                            name="photo"
                             placeholder="Enter your photo URL"
                             className="input input-bordered"
                             required
                         />
-
+                        {/* email */}
                         <label className="label">
                             <span className="label-text font-semibold">
                                 Email
@@ -40,6 +75,7 @@ const Register = () => {
                         </label>
                         <input
                             type="email"
+                            name="email"
                             placeholder="email"
                             className="input input-bordered"
                             required
@@ -47,6 +83,7 @@ const Register = () => {
                     </div>
 
                     <div className="form-control">
+                        {/* password */}
                         <label className="label">
                             <span className="label-text font-semibold">
                                 Password
@@ -54,6 +91,7 @@ const Register = () => {
                         </label>
                         <input
                             type="password"
+                            name="password"
                             placeholder="password"
                             className="input input-bordered"
                             required
