@@ -11,7 +11,9 @@ const Login = () => {
                         </h3>
 
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text font-semibold">
+                                Email
+                            </span>
                         </label>
                         <input
                             type="email"
@@ -20,9 +22,12 @@ const Login = () => {
                             required
                         />
                     </div>
+                    
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text font-semibold">
+                                Password
+                            </span>
                         </label>
                         <input
                             type="password"
@@ -39,6 +44,7 @@ const Login = () => {
                             </a>
                         </label>
                     </div>
+
                     <div className="form-control mt-6">
                         <button className="btn btn-neutral rounded-md">
                             Login
@@ -46,10 +52,10 @@ const Login = () => {
                     </div>
                 </form>
                 <p className="text-center">
-                    Don&apos;t have an account? {" "}
+                    Don&apos;t have an account?{" "}
                     <Link
                         to="/auth/register"
-                        className="text-primary underline"
+                        className="text-red-500 font-semibold"
                     >
                         Register
                     </Link>

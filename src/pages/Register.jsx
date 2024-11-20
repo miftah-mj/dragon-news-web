@@ -10,7 +10,9 @@ const Register = () => {
                             Register for an account
                         </h3>
                         <label className="label">
-                            <span className="label-text">Full Name</span>
+                            <span className="label-text font-semibold">
+                                Full Name
+                            </span>
                         </label>
                         <input
                             type="text"
@@ -18,8 +20,11 @@ const Register = () => {
                             className="input input-bordered"
                             required
                         />
+
                         <label className="label">
-                            <span className="label-text">Photo URl</span>
+                            <span className="label-text font-semibold">
+                                Photo URl
+                            </span>
                         </label>
                         <input
                             type="text"
@@ -27,8 +32,11 @@ const Register = () => {
                             className="input input-bordered"
                             required
                         />
+
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text font-semibold">
+                                Email
+                            </span>
                         </label>
                         <input
                             type="email"
@@ -37,9 +45,12 @@ const Register = () => {
                             required
                         />
                     </div>
+
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Password</span>
+                            <span className="label-text font-semibold">
+                                Password
+                            </span>
                         </label>
                         <input
                             type="password"
@@ -48,7 +59,7 @@ const Register = () => {
                             required
                         />
                         {/* accept term and condition */}
-                        <label className="cursor-pointer label">
+                        <label className="cursor-pointer label justify-start gap-2">
                             <input type="checkbox" className="checkbox" />
                             <span className="checkbox-mark"></span>
                             <span className="label-text">
@@ -56,6 +67,7 @@ const Register = () => {
                             </span>
                         </label>
                     </div>
+
                     <div className="form-control mt-6">
                         <button className="btn btn-neutral rounded-md">
                             Register
@@ -66,7 +78,7 @@ const Register = () => {
                     Already Have An Account?{" "}
                     <Link
                         to="/auth/login"
-                        className="text-primary underline"
+                        className="text-red-500 font-semibold"
                     >
                         Login
                     </Link>
