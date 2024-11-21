@@ -8,7 +8,20 @@ const Navbar = () => {
 
     return (
         <div className="flex justify-between items-center py-7">
-            <div>{user && user.name}</div>
+            <div>
+                {user && user?.email ? (
+                    <div className="">
+                        <img
+                            src={user?.photoURL}
+                            alt="photo"
+                            className="w-10 h-10 rounded-full"
+                        />
+                        <p className="text-sm">{user?.displayName}</p>
+                    </div>
+                ) : (
+                    <img src={userIcon} alt="User" className="w-full h-full" />
+                )}
+            </div>
             <div className="space-x-5">
                 <NavLink to="/" className="hover:text-primary">
                     Home
@@ -21,15 +34,6 @@ const Navbar = () => {
                 </NavLink>
             </div>
             <div className="flex items-center gap-4">
-                {user && user?.email ? (
-                    <div className="">
-                        <img src={user?.photoURL} alt="user" className="w-10 rounded-full" />
-                        <p className="text-sm">{user?.displayName}</p>
-                    </div>
-                ) : (
-                    <img src={userIcon} alt="User" className="w-full h-full" />
-                )}
-
                 {user && user?.email ? (
                     <Link
                         onClick={logOut}

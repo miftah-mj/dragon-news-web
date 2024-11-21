@@ -8,7 +8,7 @@ const LeftContent = () => {
         fetch("https://openapi.programming-hero.com/api/news/categories")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setCategories(data.data.news_category);
             });
     }, []);

@@ -8,6 +8,7 @@ The Dragon News is a news website that provides the latest news articles across 
 -   View detailed news articles
 -   User authentication (login and registration)
 -   Protected routes for authenticated users
+-   Responsive design
 
 ## Technologies Used
 
@@ -15,3 +16,4 @@ The Dragon News is a news website that provides the latest news articles across 
 -   Tailwind CSS
 -   Firebase
 -   React Router
+-   DaisyUI

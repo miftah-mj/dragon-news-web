@@ -16,7 +16,7 @@ const Login = () => {
         const formData = e.target;
         const email = formData.email.value;
         const password = formData.password.value;
-        console.log({ email, password });
+        // console.log({ email, password });
         userLogin(email, password)
             .then((result) => {
                 const user = result.user;
