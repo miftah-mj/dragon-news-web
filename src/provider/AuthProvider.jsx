@@ -7,6 +7,7 @@ import {
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signOut,
+    updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 
@@ -27,9 +28,15 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
+
     const logOut = () => {
         setLoading(true);
         return signOut(auth);
+    };
+
+    const updateUserProfile = (updatedData) => {
+        setLoading(true);
+        return updateProfile(auth.currentUser, updatedData);
     };
 
     const authInfo = {
@@ -39,6 +46,7 @@ const AuthProvider = ({ children }) => {
         logOut,
         userLogin,
         loading,
+        updateUserProfile,
     };
 
     useEffect(() => {

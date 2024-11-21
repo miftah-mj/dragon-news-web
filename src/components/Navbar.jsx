@@ -20,8 +20,15 @@ const Navbar = () => {
                     Career
                 </NavLink>
             </div>
-            <div className="flex items-center gap-2">
-                <img src={userIcon} alt="User" className="w-full h-full" />
+            <div className="flex items-center gap-4">
+                {user && user?.email ? (
+                    <div className="">
+                        <img src={user?.photoURL} alt="user" className="w-10 rounded-full" />
+                        <p className="text-sm">{user?.displayName}</p>
+                    </div>
+                ) : (
+                    <img src={userIcon} alt="User" className="w-full h-full" />
+                )}
 
                 {user && user?.email ? (
                     <Link
