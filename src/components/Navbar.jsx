@@ -32,7 +32,7 @@ const Navbar = () => {
                     </Link>
                 ) : (
                     <Link
-                        to="/auth/register"
+                        to="/auth/login"
                         className="btn btn-neutral rounded-none text-white hover:bg-gray-600"
                     >
                         Login

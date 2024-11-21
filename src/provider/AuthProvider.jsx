@@ -19,13 +19,16 @@ const AuthProvider = ({ children }) => {
     console.log(loading, user);
 
     const createNewUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
 
     const userLogin = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     };
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     };
 
@@ -52,7 +55,7 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.node.isRequired, 
+    children: PropTypes.node.isRequired,
 };
 
 export default AuthProvider;

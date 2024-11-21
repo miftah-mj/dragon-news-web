@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
     const { createNewUser, setUser } = useContext(AuthContext);
+    const [error, setError] = useState({});
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,9 +15,20 @@ const Register = () => {
         // console.log(data);
 
         const name = formData.get("name");
+        if (name.length < 3) {
+            setError({ ...error, name: "Name must be at least 3 characters" });
+            return;
+        }
         const photo = formData.get("photo");
         const email = formData.get("email");
         const password = formData.get("password");
+        if (password.length < 6) {
+            setError({
+                ...error,
+                password: "Password must be at least 6 characters",
+            });
+            return;
+        }
         console.log({ name, photo, email, password });
 
         createNewUser(email, password)
@@ -54,6 +66,12 @@ const Register = () => {
                             className="input input-bordered"
                             required
                         />
+                        {error.name && (
+                            <label className="label text-red-500 text-sm">
+                                {error.name}
+                            </label>
+                        )}
+
                         {/* photo */}
                         <label className="label">
                             <span className="label-text font-semibold">
@@ -96,6 +114,12 @@ const Register = () => {
                             className="input input-bordered"
                             required
                         />
+                        {error.password && (
+                            <label className="label text-red-500 text-sm">
+                                {error.password}
+                            </label>
+                        )}
+
                         {/* accept term and condition */}
                         <label className="cursor-pointer label justify-start gap-2">
                             <input type="checkbox" className="checkbox" />

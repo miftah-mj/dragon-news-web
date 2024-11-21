@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 const ErrorPage = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <h1 className="text-6xl font-bold text-red-600 mb-4">404</h1>
+            <h1 className="text-6xl font-bold text-red-600 mb-4 animate-bounce">
+                404
+            </h1>
             <h2 className="text-3xl font-semibold text-gray-800 mb-2">
                 Page Not Found
             </h2>
@@ -12,7 +14,7 @@ const ErrorPage = () => {
             </p>
             <Link
                 to="/"
-                className="btn bg-black text-white px-6 py-3 rounded-full"
+                className="btn bg-black text-white px-6 py-3 rounded-full animate-pulse"
             >
                 Go Back Home
             </Link>
