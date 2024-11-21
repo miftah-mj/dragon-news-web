@@ -116,7 +116,7 @@ const Register = () => {
                     Already Have An Account?{" "}
                     <Link
                         to="/auth/login"
-                        className="text-red-500 font-semibold"
+                        className="text-red-500 font-semibold hover:underline"
                     >
                         Login
                     </Link>

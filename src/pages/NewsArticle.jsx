@@ -14,16 +14,16 @@ const NewsArticle = () => {
                 <Header />
             </header>
 
-            <main className="w-11/12 mx-auto grid grid-cols-3 gap-6">
-                <section className="col-span-2">
+            <main className="w-11/12 mx-auto grid grid-cols-4 gap-6">
+                <section className="col-span-3">
                     <h3 className="text-xl font-semibold pb-4">Dragon News</h3>
-                    <div className="shadow-md border rounded-lg p-4">
+                    <div className="shadow-md border rounded-md p-4">
                         {/* News Image */}
                         <figure>
                             <img
                                 src={newsData && newsData.image_url}
                                 alt="News"
-                                className="w-full h-64 object-cover"
+                                className="object-cover"
                             />
                         </figure>
                         {/* Content Section */}

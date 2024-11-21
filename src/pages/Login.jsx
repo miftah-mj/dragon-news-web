@@ -79,7 +79,7 @@ const Login = () => {
                     Don&apos;t have an account?{" "}
                     <Link
                         to="/auth/register"
-                        className="text-red-500 font-semibold"
+                        className="text-red-500 font-semibold hover:underline"
                     >
                         Register
                     </Link>
