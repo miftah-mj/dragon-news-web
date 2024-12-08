@@ -10,6 +10,7 @@ export default {
             },
             fontFamily: {
                 poppins: ["Poppins", "sans-serif"],
+                unifrakturCook: ["UnifrakturCook", "cursive"],
             },
         },
     },
