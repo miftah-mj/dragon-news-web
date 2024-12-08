@@ -19,7 +19,11 @@ const Navbar = () => {
                         <p className="text-sm">{user?.displayName}</p>
                     </div>
                 ) : (
-                    <img src={userIcon} alt="User" className="w-full h-full" />
+                    <img
+                        src={userIcon}
+                        alt="User"
+                        className="w-full h-full rounded-full"
+                    />
                 )}
             </div>
             <div className="space-x-5">
@@ -33,7 +37,7 @@ const Navbar = () => {
                     Career
                 </NavLink>
             </div>
-            
+
             <div className="flex items-center gap-4">
                 {user && user?.email ? (
                     <Link
