@@ -11,7 +11,7 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Registering...");
+        // console.log("Registering...");
         // get the form data
         const formData = new FormData(e.target);
         // const data = Object.fromEntries(formData);

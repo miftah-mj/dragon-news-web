@@ -33,6 +33,7 @@ const Navbar = () => {
                     Career
                 </NavLink>
             </div>
+            
             <div className="flex items-center gap-4">
                 {user && user?.email ? (
                     <Link

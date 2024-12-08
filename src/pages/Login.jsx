@@ -11,7 +11,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Logging in...");
+        // console.log("Logging in...");
         // get the form data
         const formData = e.target;
         const email = formData.email.value;

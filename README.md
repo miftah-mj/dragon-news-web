@@ -12,8 +12,11 @@ The Dragon News is a news website that provides the latest news articles across 
 
 ## Technologies Used
 
--   React
 -   Tailwind CSS
--   Firebase
--   React Router
 -   DaisyUI
+-   React Router
+-   Firebase
+
+## Live Link
+
+Live link of the project [here](https://dragon-news-b6b94.web.app/).
