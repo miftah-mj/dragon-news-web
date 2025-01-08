@@ -14,9 +14,9 @@ const ErrorPage = () => {
             </p>
             <Link
                 to="/"
-                className="btn bg-black text-white px-6 py-3 rounded-full animate-pulse"
+                className="btn btn-outline px-6 py-3 rounded-full animate-pulse"
             >
-                Go Back Home
+                Go Back to Home Page &rarr;
             </Link>
         </div>
     );
