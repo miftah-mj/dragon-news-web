@@ -7,7 +7,7 @@ import RightContent from "../components/RightContent";
 
 const HomeLayout = () => {
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto pb-12">
             {/* header */}
             <header>
                 <Header />

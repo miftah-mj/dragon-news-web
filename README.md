@@ -77,4 +77,4 @@ npm start
 
 ## Live Link
 
-Live link of the project [here](https://dragon-news-b6b94.web.app/).
+Live link of the project [here](https://the-dragon-news-71c8c.web.app/).

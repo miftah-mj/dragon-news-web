@@ -2,11 +2,11 @@ import moment from "moment";
 // import logo from "../assets/logo.png";
 const Header = () => {
     return (
-        <div className="flex flex-col justify-center items-center gap-3 py-10">
+        <div className="flex flex-col justify-center items-center gap-3 py-12">
             {/* <div>
                 <img className="w-[470px]" src={logo} alt="" />
             </div> */}
-            <div>
+            <div className="text-center">
                 <h1 className="font-unifrakturCook text-7xl">
                     The Dragon News
                 </h1>
