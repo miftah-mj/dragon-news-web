@@ -52,7 +52,7 @@ const routes = createBrowserRouter([
         ],
     },
     {
-        path: "*", // 404 Not Found
+        path: "*", // 404 page
         element: <ErrorPage />,
     },
 ]);

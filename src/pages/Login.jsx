@@ -29,7 +29,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex justify-center items-start">
+        <div className="flex justify-center items-start pb-12">
             <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
                 <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
